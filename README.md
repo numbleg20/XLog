@@ -1,0 +1,2 @@
+# XLog
+The simplest logger
