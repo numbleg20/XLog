@@ -1,0 +1,6 @@
+D:\C# projects\XLog\XLog\bin\Debug\XLog.dll
+D:\C# projects\XLog\XLog\bin\Debug\XLog.pdb
+D:\C# projects\XLog\XLog\obj\Debug\XLog.csproj.AssemblyReference.cache
+D:\C# projects\XLog\XLog\obj\Debug\XLog.csproj.CoreCompileInputs.cache
+D:\C# projects\XLog\XLog\obj\Debug\XLog.dll
+D:\C# projects\XLog\XLog\obj\Debug\XLog.pdb
