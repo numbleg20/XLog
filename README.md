@@ -1,4 +1,4 @@
-# XLog
+# XLog (.NET Framework)
 A simple logger with recording to a file and output to the console
 
 # Documentation
