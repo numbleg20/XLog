@@ -1,4 +1,4 @@
-﻿
+
 #region imports
 
 using System;
@@ -13,7 +13,8 @@ using System.Threading.Tasks;
 namespace XLog {
     public class Logger {
         public string logFilePath { get; set; } = string.Empty;
-        private static string currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        public string logTimeFormat { get; set; } = string.Empty;
+        private static string currentTime;
         private static void FileWriter(string logFilePath, LogType logType, string logText) {
             if (logFilePath == string.Empty) {
                 Directory.CreateDirectory("logs");
@@ -33,6 +34,11 @@ namespace XLog {
             else return;
         }
         public void Log(LogType logType, string logText) {
+            if (logTimeFormat == string.Empty) {
+                logTimeFormat = "yyyy-MM-dd HH:mm:ss";
+            }
+            currentTime = DateTime.Now.ToString(logTimeFormat);
+
             FileWriter(logFilePath, logType, logText);
 
             ConsoleColor color = ColorsAssociations(logType);
