@@ -26,7 +26,6 @@ mainLogger.Log(
     logText: "Debug message");
 
 ```
-
 logType - this is a constant value that you can take by calling the LogType command.
 
 List of available types:
@@ -39,7 +38,17 @@ LogType.ERROR
 
 logText - this is the text for logging.<br>
 
-By default, XLog creates a `log.xlog` file at `path_to_your_program/logs`, but you can specify your own path and file name with this line:
+<br>
+
+**Add-ons and customization:**<br>
+
+1.By default, XLog creates a `log.xlog` file at `path_to_your_program/logs`, but you can specify your own path and file name with this line:
 ```C#
 mainLogger.logFilePath = "your_path/logFileName";
 ```
+
+2.You can also change the formatting of the current hour and date:
+```C#
+mainLogger.logTimeFormat = "HH:mm:ss";
+```
+Formatting table : https://www.tutorialsteacher.com/articles/datetime-formats-in-csharp
