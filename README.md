@@ -52,3 +52,9 @@ mainLogger.logFilePath = "your_path/logFileName";
 mainLogger.logTimeFormat = "HH:mm:ss";
 ```
 Formatting table : https://www.tutorialsteacher.com/articles/datetime-formats-in-csharp
+
+3.You can change the colors of the logs:
+
+```C#
+mainLogger.colors[LogType.ERROR] = ConsoleColor.Green;
+```
