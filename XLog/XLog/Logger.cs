@@ -14,6 +14,12 @@ namespace XLog {
     public class Logger {
         public string logFilePath { get; set; } = string.Empty;
         public string logTimeFormat { get; set; } = string.Empty;
+        public Dictionary<LogType, ConsoleColor> colors= new Dictionary<LogType, ConsoleColor>() {
+            {LogType.DEBUG, ConsoleColor.White},
+            {LogType.INFO, ConsoleColor.Blue},
+            {LogType.WARNING, ConsoleColor.DarkYellow},
+            {LogType.ERROR, ConsoleColor.Red},
+        };
         private static string currentTime;
         private static void FileWriter(string logFilePath, LogType logType, string logText) {
             if (logFilePath == string.Empty) {
@@ -41,29 +47,10 @@ namespace XLog {
 
             FileWriter(logFilePath, logType, logText);
 
-            ConsoleColor color = ColorsAssociations(logType);
+            ConsoleColor color = colors[logType];
             Console.ForegroundColor = color;
             Console.WriteLine("{0} - {1} - {2}", currentTime, logType.ToString(), logText);
             Console.ResetColor();
-        }
-        private static ConsoleColor ColorsAssociations(LogType logType) {
-            var color = ConsoleColor.White;
-
-            switch(logType) {
-                case LogType.DEBUG:
-                    color = ConsoleColor.White;
-                    break;
-                case LogType.INFO:
-                    color = ConsoleColor.Blue;
-                    break;
-                case LogType.WARNING:
-                    color = ConsoleColor.DarkYellow;
-                    break;
-                case LogType.ERROR:
-                    color = ConsoleColor.Red;
-                    break;
-            }
-            return color;
         }
     }
 }
