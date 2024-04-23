@@ -34,6 +34,7 @@ LogType.DEBUG
 LogType.WARNING
 LogType.INFO
 LogType.ERROR
+LogType.FORCE
 ```
 
 logText - this is the text for logging.<br>
