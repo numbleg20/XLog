@@ -67,7 +67,7 @@ mainLogger.logTextFormat = "{0}, {1}, {2}";
 Output:
     2024-04-23 14:50:06, ERROR, Error message
 ```
-Elements (**THEY ARE MANDATORY**):<br>
+Elements (they can be arranged in any order):<br>
 **{0}** - date element<br>
 **{1}** - logType element<br>
 **{2}** - logText element<br>
