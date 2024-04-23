@@ -9,6 +9,7 @@ namespace XLog {
         DEBUG,
         INFO,
         WARNING,
-        ERROR
+        ERROR,
+        FORCE
     }
 }
