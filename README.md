@@ -65,7 +65,7 @@ Formatting table : https://www.tutorialsteacher.com/articles/datetime-formats-in
 mainLogger.logTextFormat = "{0}, {1}, {2}";
 
 Output:
-2024-04-23 14:50:06, ERROR, Error 1 message
+2024-04-23 14:50:06, ERROR, Error message
 ```
 **{0}** - date element<br>
 **{1}** - logType element<br>
