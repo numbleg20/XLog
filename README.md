@@ -56,7 +56,7 @@ Formatting table : https://www.tutorialsteacher.com/articles/datetime-formats-in
 3.You can change the colors of the logs:
 
 ```C#
-    mainLogger.colors[LogType.ERROR] = ConsoleColor.Green;
+mainLogger.colors[LogType.ERROR] = ConsoleColor.Green;
 ```
 
 4.You can change text format for logs:
